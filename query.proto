@@ -1,0 +1,15 @@
+syntax = "proto3";
+package v1;
+
+option go_package =  "pb/v1";
+
+message Query{
+    //Number of Items per page
+   uint32 limit     = 1;
+    //Current page, by default = 1
+    uint32 page     = 2;
+    //Keyword to search  by string contains
+    string keyword  = 3;
+}
+
+

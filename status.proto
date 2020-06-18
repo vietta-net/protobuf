@@ -1,0 +1,16 @@
+syntax = "proto3";
+package v1;
+
+import "google/protobuf/any.proto";
+
+option go_package =  "pb/v1";
+
+message Status{
+    //Status  Code from "google.golang.org/grpc/codes"
+    uint32 code  = 1;
+    //Response Message for Client
+    string message  = 2;
+
+    repeated google.protobuf.Any details = 3;
+}
+

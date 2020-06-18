@@ -1,0 +1,15 @@
+syntax = "proto3";
+package v1;
+
+option go_package =  "pb/v1";
+
+message Pagination{
+   //A number of items are counted
+   uint32 count = 1;
+   //Number of items per page
+   uint32 limit = 2;
+   //Number of pages to show = round up (count / show)
+   uint32 pages = 3;
+   //Current_page and by default = 1
+   uint32 page = 4;
+}
